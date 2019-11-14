@@ -1,0 +1,32 @@
+<div class"row mt-5">
+	<h1> Please Login </h1>
+	<div class="card card-body">
+		<form action="/users/login" method="POST">
+		<div class="form">
+			<label for="name">Name:</label>
+			<input 
+				type="name"
+				id="name"
+				name="name"
+				class="form-control"
+				placeholder="NAME"
+				value="<%= typeof name != 'undefined' ? name : '' %>"
+				/>
+		</div>
+		<div class="form">
+			<label for="password">Password:</label>
+			<input 
+				type="password"
+				id="password"
+				name="password"
+				class="form-control"
+				placeholder="PASSWORD"
+				value="<%= typeof password != 'undefined' ? password : '' %>"
+				/>
+		</div>
+		<button type="submit" class="button"> Login</button>
+	</form>
+	</div>
+	<p class="lead mt-1"> Need an account? <a href="/users/register"> Register</a></p>
+
+</div>
