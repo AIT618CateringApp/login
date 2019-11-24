@@ -1,0 +1,202 @@
+<div>
+	<h1 class="text-center">Place Order</h1>
+    <p class="text-center"><%- message %></p>
+    <br clear="all"/>
+	<div class="card card-body">
+		<form action="/customer" method="POST">
+            <div class="form">
+                <label for="menu">Menu:</label>
+                <select id="menu" name="menu" clas="form-control">
+                    <option value="">Select menu</option>
+                    <option value="menu1">Menu 1</option>
+                    <option value="menu2">Menu 2</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="firstname">First Name:</label>
+                <input 
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    class="form-control"
+                    placeholder="First Name"
+                    />
+            </div>
+            <div class="form">
+                <label for="lastname">Last Name:</label>
+                <input 
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    class="form-control"
+                    placeholder="First Name"
+                    />
+            </div>
+            <div class="form">
+                <label for="address">Address:</label>
+                <input 
+                    type="text"
+                    id="address"
+                    name="address"
+                    class="form-control"
+                    placeholder="Last Name"
+                    />
+            </div>
+            <div class="form">
+                <label for="zipcode">Zip Code:</label>
+                <input 
+                    type="text"
+                    id="zipcode"
+                    name="zipcode"
+                    class="form-control"
+                    placeholder="Zip Code"
+                    />
+            </div>
+            <div class="form">
+                <label for="phonenumber">Phone Number:</label>
+                <input 
+                    type="text"
+                    id="phonenumber"
+                    name="phonenumber"
+                    class="form-control"
+                    placeholder="Phone Number"
+                    />
+            </div>
+            <div class="form">
+                <label for="email">Email:</label>
+                <input 
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="EMAIL"
+                />
+            </div>
+            <div class="form">
+                <label for="city">City:</label>
+                <input 
+                    type="text"
+                    id="city"
+                    name="city"
+                    class="form-control"
+                    placeholder="City"
+                />
+            </div>
+            <div class="form">
+                <label for="state">State:</label>
+                <select id="state" name="state" clas="form-control">
+                    <option value="Select State">Select State</option>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="DC">DC</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="cardtype">Card Type:</label>
+                <select id="cardtype" name="cardtype" clas="form-control">
+                    <option value="Select Card">Select State</option>
+                    <option value="Visa">Visa</option>
+                    <option value="MasterCard">MasterCard</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="expirymonth">Expiry Month:</label>
+                <select id="expirymonth" name="expirymonth" clas="form-control">
+                    <option value="Select Month"> Month</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="expiryyear">Expiry Year:</label>
+                <select id="expiryyear" name="expiryyear" clas="form-control">
+                    <option value="Year">Year</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+            <div class="form">
+                <label for="card">Card #:</label>
+                <input 
+                    type="text"
+                    id="card"
+                    name="card"
+                    class="form-control"
+                    placeholder="Card Number"
+                />
+            </div>
+            <div class="form">
+                <label for="cvv">cvv:</label>
+                <input 
+                    type="text"
+                    id="cvv"
+                    name="cvv"
+                    class="form-control"
+                    placeholder="Card Number"
+                />
+            </div>
+		<button type="submit" class="button button-primary"> Place Order</button>
+	</form>
+	</div>
+</div>
