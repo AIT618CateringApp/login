@@ -13,7 +13,7 @@
                 </select>
             </div>
             <div class="form">
-                <label for="firstname">First Name:</label>
+                <label for="firstname" required="required">First Name:</label>
                 <input 
                     type="text"
                     id="firstname"
@@ -23,7 +23,7 @@
                     />
             </div>
             <div class="form">
-                <label for="lastname">Last Name:</label>
+                <label for="lastname" required="required">Last Name:</label>
                 <input 
                     type="text"
                     id="lastname"
@@ -145,10 +145,12 @@
                     <option value="Select Card">Select State</option>
                     <option value="Visa">Visa</option>
                     <option value="MasterCard">MasterCard</option>
+                    <option value="American Express">American Express</option>
+                    <option value="Discover">Discover</option>
                 </select>
             </div>
             <div class="form">
-                <label for="expirymonth">Expiry Month:</label>
+                <label for="Expiration month">Expiration Month:</label>
                 <select id="expirymonth" name="expirymonth" clas="form-control">
                     <option value="Select Month"> Month</option>
                     <option value="1">1</option>
@@ -166,7 +168,7 @@
                 </select>
             </div>
             <div class="form">
-                <label for="expiryyear">Expiry Year:</label>
+                <label for="expirationyear">Expiration Year:</label>
                 <select id="expiryyear" name="expiryyear" clas="form-control">
                     <option value="Year">Year</option>
                     <option value="2018">2018</option>
