@@ -6,5 +6,9 @@ router.get('/', function(req, res){
 	res.render("welcome")
 });
 
+// Dashboard Page 
+router.get('/dashboard', function(req, res){
+});
+
 
 module.exports = router;
