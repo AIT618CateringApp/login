@@ -1,0 +1,31 @@
+<html lang='en'>
+<head background="dmv.png">
+<meta charset='utf-8' />
+<title>DMV Seafood Homepage</title>
+<script src="events.js"></script>
+
+
+</head>
+    <body>
+        
+        <h1>Orders</h1>
+		<p>If you have any issues please contact us at 222-123-2421</p>
+			<ul>
+				<% orders.forEach(function(order) { %>
+					<li>
+						<div><%= order.firstname %> <%= order.lastname %></div>
+						<div><%= order.address %>, <%= order.city %>, <%= order.state %>, <%= order.zipcode %></div>
+					</li>
+				<% }); %>
+			</ul>
+        
+        
+       
+			<a href="javascript:history.back()">Go Back</a>
+    
+            
+    </body>
+
+</html>
+		
+
