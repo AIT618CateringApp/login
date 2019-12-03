@@ -15,6 +15,13 @@ router.get('/register', function(req, res){
 });
 
 
+//dashboard page // THIS IS WHERE YOU WOULD CHANGE THE PAGE YOU WANT 
+// CUSTOMER OR VENDOR PAGES --> ALSO NEED TO CHANGE ON THE BELOW CODE ON REDIRCT 
+router.get('/dashboard', function(req, res){
+	res.render("dashboard")
+});
+
+
 // ________________________________________________________________________________ \\
 //register post page -- getting information from registration forms
 router.post('/register', function(req, res){
@@ -90,6 +97,7 @@ router.post('/register', function(req, res){
 							.insertOne(login, function(err,result){
 								if(err) throw err;
 								console.log("1 record inserted");
+								// THIS IS WHERE YOU WOULD CHANGE THE PAGE YOU WANT 
 								res.redirect('/users/dashboard');
 							});
 									
@@ -152,6 +160,7 @@ router.post('/login', function(req, res){
 								else
 								{
 									console.log("Login Success");
+									// THIS IS WHERE YOU WOULD CHANGE THE PAGE YOU WANT 
 									res.redirect('/users/dashboard');
 								}
 						}
