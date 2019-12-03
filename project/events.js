@@ -1,8 +1,6 @@
 
 const express = require("express");
 var app = express();
-//const jsdom = require("jsdom");
-//const { JSDOM } = jsdom;
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 ReplSetServers = require('mongodb').ReplSetServers,
@@ -32,7 +30,7 @@ MongoClient.connect(
 
    dbo.collection("orders").find().toArray(function(err,docs){
         assert.equal(null, err);
-        assert.equal(12, docs.length);
+        
         res.render("vendorOrder", {orders:docs})
         
         
