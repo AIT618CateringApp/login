@@ -18,6 +18,7 @@ router.get('/:restaurant', function(req, res){
 router.post('/', function(req, res){
     const newOrder = new Order(req.body);
     newOrder.save().then(() => {
+        console.log('data saved')
         res.render("ordersuccessful", {
             message: 'Order created'
         })
