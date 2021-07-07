@@ -1,30 +1,58 @@
 const express = require("express");
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
-const bodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient;
+const db = "mongodb+srv://ait618Group:theProject@ait618-vldt3.mongodb.net/test?retryWrites=true&w=majority";
 const path = require('path');
-require('dotenv').config();
-
-
 const mongoose = require('mongoose');
 
-console.log(process.env.MONGO);
-mongoose.connect(process.env.MONGO,  { useNewUrlParser: true })
+mongoose.connect(db,  { useNewUrlParser: true })
+//connecting to mongo
+MongoClient.connect(db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+}, function(err, db) {
+
+	if (err) {
+		console.log(err); }
+		
+	else
+		console.log("mongodb connected");
+		db.close();
+});		
 
 //ejs
 app.use(expressLayouts);
-app.use(bodyParser.urlencoded({ extended: false }))
 app.set('view engine', 'ejs');
 app.use('/public', express.static(path.join(__dirname, 'public')))
-
-//DB config
-//const db = require('....')
-// connect to mongo
+// BodyParser -- getting data from the form with data.body
+app.use(express.urlencoded({ extended: false }));
 
 //routes 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/customer', require('./routes/customer'));
+app.route('/vendorOrder').get(function(req,res)
+{
+MongoClient.connect(
+    (db), {
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+}, function(err, db) {
+    if(err) throw err;
+    console.log("you are connected to the database");
+    var dbo = db.db("ays");
 
+   dbo.collection("orders").find().toArray(function(err,docs){
+        
+        res.render("vendorOrder", {orders:docs})
+        
+        
 
+        db.close();
+
+   });
+   
+});
+});
 app.listen(3000, console.log('Navagate to localhost: 3000'));
